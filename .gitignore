@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.zip
 *.local
+*.tsbuildinfo
 .env
 .env.*
 
