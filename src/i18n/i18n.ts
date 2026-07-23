@@ -10,6 +10,8 @@ export interface Language {
 
 export const SUPPORTED_LANGUAGES: Language[] = [
   { code: 'en', name: 'English', isRtl: false },
+  { code: 'bn', name: 'বাংলা', isRtl: false },
+  { code: 'hi', name: 'हिन्दी', isRtl: false },
   { code: 'ja', name: '日本語', isRtl: false },
   { code: 'ko', name: '한국어', isRtl: false },
   { code: 'zh', name: '中文', isRtl: false },
@@ -24,6 +26,8 @@ export const SUPPORTED_LANGUAGES: Language[] = [
 
 const loadLocale = async (lng: string) => {
   switch (lng) {
+    case 'bn': return import('./locales/bn/common.json');
+    case 'hi': return import('./locales/hi/common.json');
     case 'ja': return import('./locales/ja/common.json');
     case 'ko': return import('./locales/ko/common.json');
     case 'zh': return import('./locales/zh/common.json');
