@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, User } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useContentStore } from '@/store/contentStore';
 import { useThemeStore } from '@/store/themeStore';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -8,6 +9,7 @@ import { Card } from '@/components/Card';
 import { getLocalizedText } from '@/utils/i18nHelper';
 
 export const Testimonials: React.FC = () => {
+  const { t } = useTranslation();
   const { data } = useContentStore();
   const { settings } = useThemeStore();
   const enableAnim = settings.enableAnimations;
@@ -28,7 +30,7 @@ export const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className="relative py-20 overflow-hidden z-10 bg-[#070414]/40">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionTitle title="Client Reviews" subtitle="Testimonials" />
+        <SectionTitle title={t('testimonials.title', 'Client Reviews')} subtitle={t('testimonials.subtitle', 'Testimonials')} />
 
         {enableAnim ? (
           <motion.div
@@ -80,7 +82,7 @@ export const Testimonials: React.FC = () => {
                     <div>
                       <h4 className="text-sm font-bold text-white tracking-wide">{test.name}</h4>
                       <span className="text-[10px] font-semibold text-white/30 uppercase tracking-widest">
-                        Verified Client
+                        {t('testimonials.verified_client', 'Verified Client')}
                       </span>
                     </div>
                   </div>
@@ -117,7 +119,7 @@ export const Testimonials: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-bold text-white tracking-wide">{test.name}</h4>
                     <span className="text-[10px] font-semibold text-white/30 uppercase tracking-widest">
-                      Verified Client
+                      {t('testimonials.verified_client', 'Verified Client')}
                     </span>
                   </div>
                 </div>

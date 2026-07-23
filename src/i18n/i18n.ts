@@ -49,12 +49,33 @@ const detectorOptions = {
 export const initI18n = async () => {
   let detectedLng = localStorage.getItem('i18nextLng');
   if (!detectedLng) {
-    const navLanguages = navigator.languages || [navigator.language || 'en'];
-    for (const langStr of navLanguages) {
-      const code = langStr.split('-')[0].toLowerCase();
-      if (SUPPORTED_LANGUAGES.some((l) => l.code === code)) {
-        detectedLng = code;
-        break;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2000); // Max 2 seconds timeout
+      
+      const res = await fetch('https://ipapi.co/json/', { signal: controller.signal });
+      clearTimeout(timeoutId);
+      
+      if (res.ok) {
+        const data = await res.json();
+        // ipapi.co returns languages as "en-US,es-US,ca". Extract first main code e.g. "en"
+        const ipLang = data.languages?.split(',')[0]?.split('-')[0]?.toLowerCase();
+        if (ipLang && SUPPORTED_LANGUAGES.some((l) => l.code === ipLang)) {
+          detectedLng = ipLang;
+        }
+      }
+    } catch (e) {
+      console.warn('IP-based language detection failed/timed out, falling back to browser settings.', e);
+    }
+
+    if (!detectedLng) {
+      const navLanguages = navigator.languages || [navigator.language || 'en'];
+      for (const langStr of navLanguages) {
+        const code = langStr.split('-')[0].toLowerCase();
+        if (SUPPORTED_LANGUAGES.some((l) => l.code === code)) {
+          detectedLng = code;
+          break;
+        }
       }
     }
     if (!detectedLng) detectedLng = 'en';
