@@ -10,6 +10,7 @@ import { Input } from '@/components/Input';
 import { Textarea } from '@/components/Textarea';
 import { Button } from '@/components/Button';
 import { showToast } from '@/components/Toast';
+import { getLocalizedContent } from '@/utils/i18nHelper';
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -185,10 +186,10 @@ export const Contact: React.FC = () => {
         {/* Footer matching screenshot */}
         <footer className="mt-20 border-t border-white/5 pt-8 pb-4 text-center relative z-10 w-full font-semibold">
           <p className="text-xs text-white/40 tracking-wide">
-            {t('footer.copyright', { year: new Date().getFullYear(), name: data.hero.name })}
+            {t('footer.copyright', { year: new Date().getFullYear(), name: getLocalizedContent(data.hero.name) })}
           </p>
           <p className="text-[11px] text-white/30 tracking-wide mt-2 flex items-center justify-center gap-1">
-            {t('footer.made_with', { name: data.hero.name })}
+            {t('footer.made_with', { name: getLocalizedContent(data.hero.name) })}
           </p>
         </footer>
       </div>

@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
             <div className="w-full h-full rounded-full overflow-hidden bg-darkBg border border-white/10 flex items-center justify-center">
               <img
                 src={getOptimizedCloudinaryUrl(data.hero.avatar, 400)}
-                alt={data.hero.name}
+                alt={getLocalizedContent(data.hero.name)}
                 fetchPriority="high"
                 decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
             <div className="w-full h-full rounded-full overflow-hidden bg-darkBg border border-white/10 flex items-center justify-center">
               <img
                 src={getOptimizedCloudinaryUrl(data.hero.avatar, 400)}
-                alt={data.hero.name}
+                alt={getLocalizedContent(data.hero.name)}
                 fetchPriority="high"
                 decoding="async"
                 className="w-full h-full object-cover"
@@ -129,8 +129,9 @@ export const Hero: React.FC = () => {
               className="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 leading-none text-white"
             >
               {(() => {
-                const parts = data.hero.name.split(' ');
-                if (parts.length <= 1) return data.hero.name;
+                const nameStr = getLocalizedContent(data.hero.name);
+                const parts = nameStr.split(' ');
+                if (parts.length <= 1) return nameStr;
                 const lastWord = parts[parts.length - 1];
                 const rest = parts.slice(0, -1).join(' ');
                 return (
@@ -187,8 +188,9 @@ export const Hero: React.FC = () => {
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 leading-none text-white">
               {(() => {
-                const parts = data.hero.name.split(' ');
-                if (parts.length <= 1) return data.hero.name;
+                const nameStr = getLocalizedContent(data.hero.name);
+                const parts = nameStr.split(' ');
+                if (parts.length <= 1) return nameStr;
                 const lastWord = parts[parts.length - 1];
                 const rest = parts.slice(0, -1).join(' ');
                 return (

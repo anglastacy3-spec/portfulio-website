@@ -4,16 +4,16 @@ const AppDataSchema = new mongoose.Schema(
   {
     key: { type: String, default: 'main_content', unique: true },
     hero: {
-      name: String,
+      name: mongoose.Schema.Types.Mixed, // LocalizedString
       subtitle: String,
       description: mongoose.Schema.Types.Mixed, // LocalizedString
       avatar: String,
       heroBg: String,
     },
     logo: {
-      logoText: String,
+      logoText: mongoose.Schema.Types.Mixed, // LocalizedString
       logoImage: String,
-      brandName: String,
+      brandName: mongoose.Schema.Types.Mixed, // LocalizedString
     },
     about: {
       bio: mongoose.Schema.Types.Mixed, // LocalizedString

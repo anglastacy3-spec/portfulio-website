@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSelector } from './LanguageSelector';
 
 import { useContentStore } from '@/store/contentStore';
+import { getLocalizedContent } from '@/utils/i18nHelper';
 
 export const Navbar: React.FC = () => {
   const { t } = useTranslation();
@@ -87,16 +88,16 @@ export const Navbar: React.FC = () => {
         >
           <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center border border-white/10 group-hover:shadow-[0_0_15px_var(--glow-color)] transition-all duration-300 overflow-hidden shrink-0">
             {logo.logoImage ? (
-              <img src={logo.logoImage} alt={logo.brandName || 'Logo'} className="w-full h-full object-cover" />
+              <img src={logo.logoImage} alt={getLocalizedContent(logo.brandName) || 'Logo'} className="w-full h-full object-cover" />
             ) : (
               <span className="text-sm font-black text-white tracking-widest pl-0.5">
-                {logo.logoText || 'AS'}
+                {getLocalizedContent(logo.logoText) || 'AS'}
               </span>
             )}
           </div>
           <span className="text-base md:text-lg font-bold text-white tracking-wide group-hover:text-primary transition-colors">
             {(() => {
-              const fullStr = logo.brandName || 'AnglaStacy';
+              const fullStr = getLocalizedContent(logo.brandName) || 'AnglaStacy';
               const parts = fullStr.split(/(?=[A-Z])|\s+/).filter(Boolean);
               if (parts.length > 1) {
                 return (

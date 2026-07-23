@@ -3,6 +3,7 @@ import type { AppData, HeroData, BrandLogo, SocialLink, ServiceItem, ProjectItem
 import { storageService } from '@/services/storageService';
 import { apiService } from '@/services/apiService';
 import { DEFAULT_DATA } from '@/constants';
+import { setLocalizedContent } from '@/utils/i18nHelper';
 
 interface ContentState {
   data: AppData;
@@ -125,25 +126,51 @@ export const useContentStore = create<ContentState>((set, get) => {
     },
 
     updateHero: (hero) => {
-      const updated = { ...get().data, hero: { ...get().data.hero, ...hero } };
+      const current = get().data.hero;
+      const updatedHero = { ...current };
+      
+      if (hero.name !== undefined) {
+        updatedHero.name = setLocalizedContent(current.name, hero.name as string);
+      }
+      if (hero.description !== undefined) {
+        updatedHero.description = setLocalizedContent(current.description, hero.description as string);
+      }
+      if (hero.subtitle !== undefined) {
+        updatedHero.subtitle = hero.subtitle;
+      }
+      if (hero.avatar !== undefined) {
+        updatedHero.avatar = hero.avatar;
+      }
+      if (hero.heroBg !== undefined) {
+        updatedHero.heroBg = hero.heroBg;
+      }
+
+      const updated = { ...get().data, hero: updatedHero };
       sync(updated);
     },
 
     updateLogo: (logo) => {
-      const updated = {
-        ...get().data,
-        logo: {
-          logoText: 'AS',
-          brandName: 'AnglaStacy',
-          ...(get().data.logo || {}),
-          ...logo,
-        },
-      };
+      const current = get().data.logo || { logoText: 'AS', logoImage: '', brandName: 'AnglaStacy' };
+      const updatedLogo = { ...current };
+
+      if (logo.logoText !== undefined) {
+        updatedLogo.logoText = setLocalizedContent(current.logoText, logo.logoText as string);
+      }
+      if (logo.brandName !== undefined) {
+        updatedLogo.brandName = setLocalizedContent(current.brandName, logo.brandName as string);
+      }
+      if (logo.logoImage !== undefined) {
+        updatedLogo.logoImage = logo.logoImage;
+      }
+
+      const updated = { ...get().data, logo: updatedLogo };
       sync(updated);
     },
 
     updateAboutBio: (bio) => {
-      const updated = { ...get().data, about: { ...get().data.about, bio } };
+      const currentBio = get().data.about.bio;
+      const updatedBio = setLocalizedContent(currentBio, bio);
+      const updated = { ...get().data, about: { ...get().data.about, bio: updatedBio } };
       sync(updated);
     },
 
@@ -165,9 +192,19 @@ export const useContentStore = create<ContentState>((set, get) => {
     },
 
     updateExperience: (id, exp) => {
-      const updatedList = get().data.about.experience.map((item) =>
-        item.id === id ? { ...item, ...exp } : item
-      );
+      const updatedList = get().data.about.experience.map((item) => {
+        if (item.id === id) {
+          const updatedItem = { ...item, ...exp };
+          if (exp.role !== undefined) {
+            updatedItem.role = setLocalizedContent(item.role, exp.role as string);
+          }
+          if (exp.description !== undefined) {
+            updatedItem.description = setLocalizedContent(item.description, exp.description as string);
+          }
+          return updatedItem;
+        }
+        return item;
+      });
       const updated = {
         ...get().data,
         about: { ...get().data.about, experience: updatedList },
@@ -235,9 +272,19 @@ export const useContentStore = create<ContentState>((set, get) => {
     },
 
     updateService: (id, service) => {
-      const updatedList = get().data.services.map((item) =>
-        item.id === id ? { ...item, ...service } : item
-      );
+      const updatedList = get().data.services.map((item) => {
+        if (item.id === id) {
+          const updatedItem = { ...item, ...service };
+          if (service.title !== undefined) {
+            updatedItem.title = setLocalizedContent(item.title, service.title as string);
+          }
+          if (service.description !== undefined) {
+            updatedItem.description = setLocalizedContent(item.description, service.description as string);
+          }
+          return updatedItem;
+        }
+        return item;
+      });
       const updated = { ...get().data, services: updatedList };
       sync(updated);
     },
@@ -258,9 +305,19 @@ export const useContentStore = create<ContentState>((set, get) => {
     },
 
     updateProject: (id, project) => {
-      const updatedList = get().data.projects.map((item) =>
-        item.id === id ? { ...item, ...project } : item
-      );
+      const updatedList = get().data.projects.map((item) => {
+        if (item.id === id) {
+          const updatedItem = { ...item, ...project };
+          if (project.title !== undefined) {
+            updatedItem.title = setLocalizedContent(item.title, project.title as string);
+          }
+          if (project.description !== undefined) {
+            updatedItem.description = setLocalizedContent(item.description, project.description as string);
+          }
+          return updatedItem;
+        }
+        return item;
+      });
       const updated = { ...get().data, projects: updatedList };
       sync(updated);
     },
@@ -281,9 +338,16 @@ export const useContentStore = create<ContentState>((set, get) => {
     },
 
     updateTestimonial: (id, testimonial) => {
-      const updatedList = get().data.testimonials.map((item) =>
-        item.id === id ? { ...item, ...testimonial } : item
-      );
+      const updatedList = get().data.testimonials.map((item) => {
+        if (item.id === id) {
+          const updatedItem = { ...item, ...testimonial };
+          if (testimonial.comment !== undefined) {
+            updatedItem.comment = setLocalizedContent(item.comment, testimonial.comment as string);
+          }
+          return updatedItem;
+        }
+        return item;
+      });
       const updated = { ...get().data, testimonials: updatedList };
       sync(updated);
     },
@@ -336,7 +400,7 @@ export const useContentStore = create<ContentState>((set, get) => {
     resetData: async () => {
       await apiService.resetAll();
       storageService.resetAll();
-      const defaultData = DEFAULT_DATA;
+      const defaultData = DEFAULT_DATA as AppData;
       set({ data: defaultData, feedbacks: [] });
       storageService.saveAppData(defaultData);
       

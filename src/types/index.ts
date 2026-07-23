@@ -26,7 +26,7 @@ export interface Experience {
 }
 
 export interface HeroData {
-  name: string;
+  name: LocalizedString;
   subtitle: string;
   description: LocalizedString;
   avatar: string; // base64 or URL
@@ -93,9 +93,9 @@ export interface SeoSettings {
 }
 
 export interface BrandLogo {
-  logoText: string;
+  logoText: LocalizedString;
   logoImage?: string;
-  brandName: string;
+  brandName: LocalizedString;
 }
 
 export interface AppData {

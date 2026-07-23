@@ -158,7 +158,7 @@ export const Dashboard: React.FC<{ onLogout: () => void }> = ({ onLogout }) => {
               {data.logo?.logoImage ? (
                 <img src={data.logo.logoImage} alt="Logo" className="w-full h-full object-cover" />
               ) : (
-                data.logo?.logoText || 'AS'
+                getLocalizedText(data.logo?.logoText) || 'AS'
               )}
             </div>
             <span className="text-sm font-bold tracking-wide">{t('admin.console_title', 'Admin Console')}</span>
@@ -236,13 +236,13 @@ export const Dashboard: React.FC<{ onLogout: () => void }> = ({ onLogout }) => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <Input
                         label="Brand Name Title"
-                        value={data.logo?.brandName ?? 'AnglaStacy'}
+                        value={getLocalizedText(data.logo?.brandName) ?? 'AnglaStacy'}
                         placeholder="e.g. AnglaStacy"
                         onChange={(e) => updateLogo({ brandName: e.target.value })}
                       />
                       <Input
                         label="Logo Initials / Text Code"
-                        value={data.logo?.logoText ?? 'AS'}
+                        value={getLocalizedText(data.logo?.logoText) ?? 'AS'}
                         placeholder="e.g. AS"
                         onChange={(e) => updateLogo({ logoText: e.target.value })}
                       />
@@ -258,7 +258,7 @@ export const Dashboard: React.FC<{ onLogout: () => void }> = ({ onLogout }) => {
                           {data.logo?.logoImage ? (
                             <img src={data.logo.logoImage} alt="Logo preview" className="w-full h-full object-cover" />
                           ) : (
-                            <span className="text-xs font-black text-white">{data.logo?.logoText || 'AS'}</span>
+                            <span className="text-xs font-black text-white">{getLocalizedText(data.logo?.logoText) || 'AS'}</span>
                           )}
                         </div>
 
@@ -314,7 +314,7 @@ export const Dashboard: React.FC<{ onLogout: () => void }> = ({ onLogout }) => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <Input
                         label="Profile Name"
-                        value={data.hero.name}
+                        value={getLocalizedText(data.hero.name)}
                         onChange={(e) => updateHero({ name: e.target.value })}
                       />
                       <Input

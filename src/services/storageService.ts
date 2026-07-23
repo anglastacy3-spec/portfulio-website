@@ -35,13 +35,13 @@ export const storageService = {
     try {
       const stored = localStorage.getItem(DATA_KEY);
       if (!stored) {
-        this.saveAppData(DEFAULT_DATA);
-        return DEFAULT_DATA;
+        this.saveAppData(DEFAULT_DATA as AppData);
+        return DEFAULT_DATA as AppData;
       }
       return JSON.parse(stored);
     } catch (e) {
       console.error('Error loading page content, using defaults', e);
-      return DEFAULT_DATA;
+      return DEFAULT_DATA as AppData;
     }
   },
 
