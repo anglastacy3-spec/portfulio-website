@@ -561,10 +561,6 @@ app.post('/api/reset', async (req, res) => {
   }
 });
 
-// Serve static assets in production
-const distPath = path.join(__dirname, '../dist');
-app.use(express.static(distPath));
-
 // Ensure DB connection before processing API requests
 app.use(async (req, res, next) => {
   if (req.path.startsWith('/api') && req.path !== '/api/health') {
@@ -573,13 +569,18 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// Wildcard fallback for React Router SPA (non-API routes)
-app.get(/.*/, (req, res, next) => {
-  if (req.path.startsWith('/api')) {
-    return next();
-  }
-  res.sendFile(path.join(distPath, 'index.html'));
-});
+// Serve static assets & wildcard fallback in standalone production mode (non-Vercel)
+if (!process.env.VERCEL) {
+  const distPath = path.join(__dirname, '../dist');
+  app.use(express.static(distPath));
+
+  app.get(/.*/, (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 // Start Server & Connect Database
 let isConnected = false;
