@@ -2,10 +2,15 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import AppData from './models/AppData.js';
 import Feedback from './models/Feedback.js';
 import Theme from './models/Theme.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -512,6 +517,18 @@ app.post('/api/reset', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// Serve static assets in production
+const distPath = path.join(__dirname, '../dist');
+app.use(express.static(distPath));
+
+// Wildcard fallback for React Router SPA (non-API routes)
+app.get(/.*/, (req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Start Server & Connect Database
