@@ -405,7 +405,7 @@ app.get('/api/health', (req, res) => {
 // App Data Routes
 app.get('/api/data', async (req, res) => {
   try {
-    res.set('Cache-Control', 'public, max-age=30, s-maxage=120, stale-while-revalidate=300');
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
     if (cachedAppData) {
       return res.json(cachedAppData);
     }
@@ -438,7 +438,7 @@ app.put('/api/data', async (req, res) => {
 // Feedbacks Routes
 app.get('/api/feedbacks', async (req, res) => {
   try {
-    res.set('Cache-Control', 'public, max-age=10, stale-while-revalidate=60');
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
     const feedbacks = await Feedback.find().sort({ createdAt: -1 }).lean();
     res.json(feedbacks);
   } catch (err) {
@@ -468,7 +468,7 @@ app.delete('/api/feedbacks/:id', async (req, res) => {
 // Theme Routes
 app.get('/api/theme', async (req, res) => {
   try {
-    res.set('Cache-Control', 'public, max-age=60, s-maxage=300');
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
     if (cachedTheme) {
       return res.json(cachedTheme);
     }

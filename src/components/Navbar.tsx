@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
     { label: t('nav.home', 'Home'), target: 'home' },
     { label: t('nav.socials', 'Socials'), target: 'socials' },
     { label: t('nav.services', 'Services'), target: 'services' },
-    { label: t('nav.feedback', 'Feedback'), target: 'contact' },
+    { label: t('nav.contact', 'Feedback'), target: 'contact' },
   ];
 
   // Track scroll position to add glass effect and active section highlight
