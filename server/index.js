@@ -565,6 +565,14 @@ app.post('/api/reset', async (req, res) => {
 const distPath = path.join(__dirname, '../dist');
 app.use(express.static(distPath));
 
+// Ensure DB connection before processing API requests
+app.use(async (req, res, next) => {
+  if (req.path.startsWith('/api') && req.path !== '/api/health') {
+    await connectDB();
+  }
+  next();
+});
+
 // Wildcard fallback for React Router SPA (non-API routes)
 app.get(/.*/, (req, res, next) => {
   if (req.path.startsWith('/api')) {
@@ -574,20 +582,34 @@ app.get(/.*/, (req, res, next) => {
 });
 
 // Start Server & Connect Database
-if (!MONGODB_URI) {
-  console.error('❌ MONGODB_URI environment variable is missing.');
-  process.exit(1);
+let isConnected = false;
+export async function connectDB() {
+  if (isConnected || mongoose.connection.readyState === 1) {
+    isConnected = true;
+    return;
+  }
+  if (!MONGODB_URI) {
+    console.warn('⚠️ MONGODB_URI environment variable is missing.');
+    return;
+  }
+  try {
+    await mongoose.connect(MONGODB_URI);
+    isConnected = true;
+    console.log('✅ Connected to MongoDB Atlas successfully.');
+    await seedDefaultData();
+  } catch (err) {
+    console.error('❌ MongoDB Connection Failure:', err);
+  }
 }
 
-mongoose
-  .connect(MONGODB_URI)
-  .then(() => {
-    console.log('✅ Connected to MongoDB Atlas successfully.');
-    seedDefaultData();
-    app.listen(PORT, () => {
-      console.log(`🚀 Express Backend Server running on http://localhost:${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.error('❌ MongoDB Connection Failure:', err);
+if (MONGODB_URI) {
+  connectDB();
+}
+
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Express Backend Server running on http://localhost:${PORT}`);
   });
+}
+
+export default app;
