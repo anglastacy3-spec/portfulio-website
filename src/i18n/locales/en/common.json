@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "socials": "Socials",
+    "services": "Services",
+    "contact": "Feedback",
+    "feedback": "Feedback",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials"
+  },
+  "hero": {
+    "subtitle": "Hello, I'm",
+    "default_description": "A passionate individual exploring ideas, creating solutions & building the future.",
+    "get_to_know_me": "Get to Know Me"
+  },
+  "socials": {
+    "title": "Connect With Me",
+    "subtitle": "Follow me on my social platforms"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "What I can do for you",
+    "personal_services": {
+      "title": "Personal Services",
+      "desc": "Discreet, professional and tailored experiences to meet your individual needs."
+    },
+    "casual_encounters": {
+      "title": "Casual Encounters",
+      "desc": "Enjoy relaxed and spontaneous meetups with like-minded people."
+    },
+    "short_term_relationships": {
+      "title": "Short Term Relationships",
+      "desc": "Build meaningful connections and enjoy companionship for the short term."
+    },
+    "dating": {
+      "title": "Dating",
+      "desc": "Find genuine connections and explore potential for long-term relationships."
+    }
+  },
+  "feedback": {
+    "title": "Feedback",
+    "subtitle": "Your thoughts and suggestions matter!",
+    "name_label": "Your Name",
+    "email_label": "Your Email (Optional)",
+    "rating_label": "Rating",
+    "feedback_label": "Your Feedback",
+    "name_placeholder": "Your Name",
+    "email_placeholder": "Your Email (Optional)",
+    "feedback_placeholder": "Your Feedback",
+    "submit_btn": "Send Feedback",
+    "submit_btn_loading": "Sending...",
+    "name_required": "Name must be at least 2 characters",
+    "feedback_required": "Message must be at least 5 characters",
+    "email_invalid": "Please enter a valid email",
+    "rating_required": "Please select a rating",
+    "success_msg": "Thank you! Your feedback has been stored offline.",
+    "error_msg": "An error occurred while saving your feedback."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. All rights reserved.",
+    "made_with": "Made with ❤️ by {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "desc": "The page you are looking for does not exist or has been moved.",
+    "back_home": "Back to Home"
+  },
+  "login": {
+    "title": "Admin Access",
+    "subtitle": "Enter offline credentials to access settings",
+    "email_label": "Email Address",
+    "password_label": "Password",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "Authorize Session",
+    "authorize_btn_loading": "Authorizing...",
+    "email_required": "Please enter a valid email address",
+    "password_required": "Password is required",
+    "login_success": "Admin login successful!",
+    "login_error": "Invalid email or password.",
+    "back_to_landing": "Back to Landing"
+  },
+  "admin": {
+    "console_title": "Admin Console",
+    "offline_mode": "Offline mode",
+    "reset_btn": "Reset All Defaults",
+    "reset_confirm": "Reset all content & theme configurations to defaults?",
+    "reset_success": "Restored default state successfully.",
+    "logout_btn": "Logout",
+    "logout_success": "Logged out successfully.",
+    "save_btn": "Save",
+    "update_success": "Settings updated successfully!",
+    "tabs": {
+      "hero": "Hero Profile",
+      "about": "About & Skills",
+      "socials": "Social Profiles",
+      "services": "My Services",
+      "portfolio": "Portfolio Cards",
+      "testimonials": "Testimonials",
+      "feedbacks": "Feedbacks Viewer",
+      "theme": "Theme Settings",
+      "seo": "SEO Config"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Biography & Expertise",
+    "bio_header": "Designing Experiences, Writing Code.",
+    "work_history": "Work History",
+    "technical_proficiency": "Technical Proficiency",
+    "bio": "I am a Senior Frontend Engineer with over 6 years of experience specializing in building beautiful, highly interactive web applications. I focus on pixel-perfect details, immersive animations, and clean architectures that deliver world-class user experiences.",
+    "experience": {
+      "exp1": {
+        "role": "Senior UI/UX Engineer",
+        "description": "Led development of highly animated React applications, designing state-of-the-art interactive dashboards and custom UI frameworks."
+      },
+      "exp2": {
+        "role": "Frontend Developer",
+        "description": "Created premium, glassmorphic customer landing pages with responsive animations and state management stores."
+      },
+      "exp3": {
+        "role": "UI Designer & Web Developer",
+        "description": "Designed and built clean, modular websites for client startups. Focused on SEO, accessibility, and high performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

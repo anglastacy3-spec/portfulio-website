@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "होम",
+    "socials": "सोशल",
+    "services": "सेवाएँ",
+    "contact": "संपर्क",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials"
+  },
+  "hero": {
+    "subtitle": "नमस्ते, मैं हूँ",
+    "default_description": "विचारों की खोज करने, समाधान बनाने और भविष्य का निर्माण करने वाला एक उत्साही व्यक्ति।",
+    "get_to_know_me": "मेरे बारे में जानें"
+  },
+  "socials": {
+    "title": "मुझसे जुड़ें",
+    "subtitle": "मेरे सोशल मीडिया प्लेटफॉर्म पर मुझे फॉलो करें"
+  },
+  "services": {
+    "title": "मेरी सेवाएँ",
+    "subtitle": "मैं आपके लिए क्या कर सकता हूँ",
+    "personal_services": {
+      "title": "व्यक्तिगत सेवाएँ",
+      "desc": "आपकी व्यक्तिगत आवश्यकताओं को पूरा करने के लिए गोपनीय, पेशेवर और अनुकूलित अनुभव।"
+    },
+    "casual_encounters": {
+      "title": "कैज़ुअल मुलाकात",
+      "desc": "समान विचारधारा वाले लोगों के साथ आरामदेह और सहज मुलाकातों का आनंद लें।"
+    },
+    "short_term_relationships": {
+      "title": "अल्पकालिक संबंध",
+      "desc": "सार्थक संबंध बनाएं और अल्पावधि के लिए साहचर्य का आनंद लें।"
+    },
+    "dating": {
+      "title": "डेटिंग",
+      "desc": "सच्चे संबंधों की तलाश करें और दीर्घकालिक संबंधों की संभावनाओं को तलाशें।"
+    }
+  },
+  "feedback": {
+    "title": "प्रतिक्रिया",
+    "subtitle": "आपके विचार और सुझाव हमारे लिए महत्वपूर्ण हैं!",
+    "name_label": "आपका नाम",
+    "email_label": "आपका ईमेल (वैकल्पिक)",
+    "rating_label": "रेटिंग",
+    "feedback_label": "आपकी प्रतिक्रिया",
+    "name_placeholder": "आपका नाम",
+    "email_placeholder": "आपका ईमेल (वैकल्पिक)",
+    "feedback_placeholder": "आपकी प्रतिक्रिया",
+    "submit_btn": "प्रतिक्रिया भेजें",
+    "submit_btn_loading": "भेजा जा रहा है...",
+    "name_required": "नाम कम से कम 2 अक्षरों का होना चाहिए",
+    "feedback_required": "संदेश कम से कम 5 अक्षरों का होना चाहिए",
+    "email_invalid": "कृपया एक मान्य ईमेल दर्ज करें",
+    "rating_required": "कृपया एक रेटिंग चुनें",
+    "success_msg": "धन्यवाद! आपकी प्रतिक्रिया ऑफ़लाइन संग्रहीत कर दी गई है।",
+    "error_msg": "आपकी प्रतिक्रिया सहेजते समय एक त्रुटि हुई।"
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}। सर्वाधिकार सुरक्षित।",
+    "made_with": "{{name}} द्वारा ❤️ के साथ निर्मित"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "पृष्ठ नहीं मिला",
+    "desc": "आप जिस पृष्ठ की तलाश कर रहे हैं उसका अस्तित्व नहीं है या उसे हटा दिया गया है।",
+    "back_home": "होम पेज पर जाएं"
+  },
+  "login": {
+    "title": "प्रशासक पहुंच",
+    "subtitle": "सेटिंग्स तक पहुंचने के लिए ऑफ़लाइन क्रेडेंशियल दर्ज करें",
+    "email_label": "ईमेल पता",
+    "password_label": "पासवर्ड",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "सत्र अधिकृत करें",
+    "authorize_btn_loading": "अधिकृत किया जा रहा है...",
+    "email_required": "कृपया एक मान्य ईमेल पता दर्ज करें",
+    "password_required": "पासवर्ड आवश्यक है",
+    "login_success": "व्यवस्थापक लॉगिन सफल रहा!",
+    "login_error": "अमान्य ईमेल या पासवर्ड।",
+    "back_to_landing": "लैंडिंग पेज पर वापस जाएं"
+  },
+  "admin": {
+    "console_title": "प्रशासन कंसोल",
+    "offline_mode": "ऑफ़लाइन मोड",
+    "reset_btn": "सभी डिफ़ॉल्ट रीसेट करें",
+    "reset_confirm": "सभी सामग्री और थीम कॉन्फ़िगरेशन को डिफ़ॉल्ट पर रीसेट करें?",
+    "reset_success": "डिफ़ॉल्ट स्थिति सफलतापूर्वक बहाल की गई।",
+    "logout_btn": "लॉगआउट",
+    "logout_success": "सफलतापूर्वक लॉग आउट हो गया।",
+    "save_btn": "सहेजें",
+    "update_success": "सेटिंग्स सफलतापूर्वक अपडेट हो गईं!",
+    "tabs": {
+      "hero": "हीरो प्रोफ़ाइल",
+      "about": "परिचय और कौशल",
+      "socials": "सोशल प्रोफाइल",
+      "services": "मेरी सेवाएँ",
+      "portfolio": "पोर्टफोलियो कार्ड",
+      "testimonials": "प्रशंसापत्र",
+      "feedbacks": "प्रतिक्रिया दर्शक",
+      "theme": "थीम सेटिंग्स",
+      "seo": "एसईओ कॉन्फ़िग"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Biography & Expertise",
+    "bio_header": "Designing Experiences, Writing Code.",
+    "work_history": "Work History",
+    "technical_proficiency": "Technical Proficiency",
+    "bio": "I am a Senior Frontend Engineer with over 6 years of experience specializing in building beautiful, highly interactive web applications. I focus on pixel-perfect details, immersive animations, and clean architectures that deliver world-class user experiences.",
+    "experience": {
+      "exp1": {
+        "role": "Senior UI/UX Engineer",
+        "description": "Led development of highly animated React applications, designing state-of-the-art interactive dashboards and custom UI frameworks."
+      },
+      "exp2": {
+        "role": "Frontend Developer",
+        "description": "Created premium, glassmorphic customer landing pages with responsive animations and state management stores."
+      },
+      "exp3": {
+        "role": "UI Designer & Web Developer",
+        "description": "Designed and built clean, modular websites for client startups. Focused on SEO, accessibility, and high performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

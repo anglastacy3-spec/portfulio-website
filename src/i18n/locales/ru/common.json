@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Главная",
+    "socials": "Контакты",
+    "services": "Услуги",
+    "contact": "Отзывы",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials"
+  },
+  "hero": {
+    "subtitle": "Привет, я",
+    "default_description": "Увлеченный человек, исследующий идеи, создающий решения и строящий будущее.",
+    "get_to_know_me": "Узнать больше"
+  },
+  "socials": {
+    "title": "Связаться со мной",
+    "subtitle": "Следите за мной на моих социальных платформах"
+  },
+  "services": {
+    "title": "Мои Услуги",
+    "subtitle": "Что я могу для вас сделать",
+    "personal_services": {
+      "title": "Персональные услуги",
+      "desc": "Конфиденциальный, профессиональный и индивидуальный подход к вашим потребностям."
+    },
+    "casual_encounters": {
+      "title": "Неформальные встречи",
+      "desc": "Наслаждайтесь непринужденными и спонтанными встречами с единомышленниками."
+    },
+    "short_term_relationships": {
+      "title": "Краткосрочные отношения",
+      "desc": "Стройте значимые связи и наслаждайтесь общением в краткосрочной перспективе."
+    },
+    "dating": {
+      "title": "Знакомства",
+      "desc": "Найдите искренние связи и исследуйте потенциал для долгосрочных отношений."
+    }
+  },
+  "feedback": {
+    "title": "Отзывы",
+    "subtitle": "Ваше мнение и предложения имеют значение!",
+    "name_label": "Ваше Имя",
+    "email_label": "Ваш Email (Опционально)",
+    "rating_label": "Рейтинг",
+    "feedback_label": "Ваш Отзыв",
+    "name_placeholder": "Ваше Имя",
+    "email_placeholder": "Ваш Email (Опционально)",
+    "feedback_placeholder": "Ваш Отзыв",
+    "submit_btn": "Отправить Отзыв",
+    "submit_btn_loading": "Отправка...",
+    "name_required": "Имя должно содержать не менее 2 символов",
+    "feedback_required": "Сообщение должно содержать не менее 5 символов",
+    "email_invalid": "Пожалуйста, введите корректный адрес электронной почты",
+    "rating_required": "Пожалуйста, выберите оценку",
+    "success_msg": "Спасибо! Ваш отзыв сохранен в автономном режиме.",
+    "error_msg": "Произошла ошибка при сохранении вашего отзыва."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. Все права защищены.",
+    "made_with": "Сделано с ❤️ автором {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "Страница Не Найдена",
+    "desc": "Страница, которую вы ищете, не существует или была перемещена.",
+    "back_home": "Вернуться на Главную"
+  },
+  "login": {
+    "title": "Доступ Администратора",
+    "subtitle": "Введите автономные учетные данные для доступа к настройкам",
+    "email_label": "Адрес Электронной Почты",
+    "password_label": "Пароль",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "Авторизовать Сессию",
+    "authorize_btn_loading": "Авторизация...",
+    "email_required": "Пожалуйста, введите корректный адрес электронной почты",
+    "password_required": "Пароль обязателен",
+    "login_success": "Вход администратора выполнен успешно!",
+    "login_error": "Неверный адрес электронной почты или пароль.",
+    "back_to_landing": "Назад к сайту"
+  },
+  "admin": {
+    "console_title": "Панель Управления",
+    "offline_mode": "Автономный режим",
+    "reset_btn": "Сбросить настройки",
+    "reset_confirm": "Сбросить все содержимое и настройки темы по умолчанию?",
+    "reset_success": "Состояние по умолчанию успешно восстановлено.",
+    "logout_btn": "Выйти",
+    "logout_success": "Выход выполнен успешно.",
+    "save_btn": "Сохранить",
+    "update_success": "Настройки успешно обновлены!",
+    "tabs": {
+      "hero": "Главный Профиль",
+      "about": "О себе и навыки",
+      "socials": "Социальные Сети",
+      "services": "Мои Услуги",
+      "portfolio": "Портфолио",
+      "testimonials": "Рекомендации",
+      "feedbacks": "Просмотр Отзывов",
+      "theme": "Настройки Темы",
+      "seo": "Настройка SEO"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Biography & Expertise",
+    "bio_header": "Designing Experiences, Writing Code.",
+    "work_history": "Work History",
+    "technical_proficiency": "Technical Proficiency",
+    "bio": "I am a Senior Frontend Engineer with over 6 years of experience specializing in building beautiful, highly interactive web applications. I focus on pixel-perfect details, immersive animations, and clean architectures that deliver world-class user experiences.",
+    "experience": {
+      "exp1": {
+        "role": "Senior UI/UX Engineer",
+        "description": "Led development of highly animated React applications, designing state-of-the-art interactive dashboards and custom UI frameworks."
+      },
+      "exp2": {
+        "role": "Frontend Developer",
+        "description": "Created premium, glassmorphic customer landing pages with responsive animations and state management stores."
+      },
+      "exp3": {
+        "role": "UI Designer & Web Developer",
+        "description": "Designed and built clean, modular websites for client startups. Focused on SEO, accessibility, and high performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

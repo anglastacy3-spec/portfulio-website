@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Início",
+    "socials": "Redes",
+    "services": "Serviços",
+    "contact": "Contacto",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials"
+  },
+  "hero": {
+    "subtitle": "Olá, eu sou",
+    "default_description": "Um indivíduo apaixonado que explora ideias, cria soluções e constrói o futuro.",
+    "get_to_know_me": "Conheça-me"
+  },
+  "socials": {
+    "title": "Conecte-se comigo",
+    "subtitle": "Siga-me nas minhas redes sociais"
+  },
+  "services": {
+    "title": "Meus Serviços",
+    "subtitle": "O que posso fazer por você",
+    "personal_services": {
+      "title": "Serviços Pessoais",
+      "desc": "Experiências discretas, profissionais e sob medida para atender às suas necessidades."
+    },
+    "casual_encounters": {
+      "title": "Encontros Casuais",
+      "desc": "Desfrute de encontros descontraídos e espontâneos com pessoas que pensam como você."
+    },
+    "short_term_relationships": {
+      "title": "Relacionamentos de Curto Prazo",
+      "desc": "Construa conexões significativas e desfrute de companhia a curto prazo."
+    },
+    "dating": {
+      "title": "Dating",
+      "desc": "Encontre conexões genuínas e explore o potencial para relacionamentos de longo prazo."
+    }
+  },
+  "feedback": {
+    "title": "Feedback",
+    "subtitle": "Suas opiniões e sugestões importam!",
+    "name_label": "Seu Nome",
+    "email_label": "Seu E-mail (Opcional)",
+    "rating_label": "Avaliação",
+    "feedback_label": "Seu Feedback",
+    "name_placeholder": "Seu Nome",
+    "email_placeholder": "Seu E-mail (Opcional)",
+    "feedback_placeholder": "Seu Feedback",
+    "submit_btn": "Enviar Feedback",
+    "submit_btn_loading": "Enviando...",
+    "name_required": "O nome deve ter pelo menos 2 caracteres",
+    "feedback_required": "A mensagem deve ter pelo menos 5 caracteres",
+    "email_invalid": "Insira um e-mail válido",
+    "rating_required": "Selecione uma classificação",
+    "success_msg": "Obrigado! Seu feedback foi salvo offline.",
+    "error_msg": "Ocorreu um erro ao salvar o seu feedback."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. Todos os direitos reservados.",
+    "made_with": "Feito com ❤️ por {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "Página Não Encontrada",
+    "desc": "A página que você procura não existe ou foi movida.",
+    "back_home": "Voltar ao Início"
+  },
+  "login": {
+    "title": "Acesso Administrador",
+    "subtitle": "Insira as credenciais offline para acessar as configurações",
+    "email_label": "Endereço de E-mail",
+    "password_label": "Senha",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "Autorizar Sessão",
+    "authorize_btn_loading": "Autorizando...",
+    "email_required": "Insira um endereço de e-mail válido",
+    "password_required": "A senha é obrigatória",
+    "login_success": "Login de administrador bem-sucedido!",
+    "login_error": "E-mail ou senha inválidos.",
+    "back_to_landing": "Voltar ao site"
+  },
+  "admin": {
+    "console_title": "Painel Administrador",
+    "offline_mode": "Modo offline",
+    "reset_btn": "Restaurar Padrões",
+    "reset_confirm": "Restaurar todo o conteúdo e configurações de tema para os padrões?",
+    "reset_success": "Estado padrão restaurado com sucesso.",
+    "logout_btn": "Terminar Sessão",
+    "logout_success": "Sessão terminada com sucesso.",
+    "save_btn": "Guardar",
+    "update_success": "Configurações atualizadas com sucesso!",
+    "tabs": {
+      "hero": "Perfil Principal",
+      "about": "Sobre mim & Habilidades",
+      "socials": "Redes Sociais",
+      "services": "Meus Serviços",
+      "portfolio": "Portfólio",
+      "testimonials": "Depoimentos",
+      "feedbacks": "Ver Feedbacks",
+      "theme": "Ajustes de Tema",
+      "seo": "Configuração SEO"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Biography & Expertise",
+    "bio_header": "Designing Experiences, Writing Code.",
+    "work_history": "Work History",
+    "technical_proficiency": "Technical Proficiency",
+    "bio": "I am a Senior Frontend Engineer with over 6 years of experience specializing in building beautiful, highly interactive web applications. I focus on pixel-perfect details, immersive animations, and clean architectures that deliver world-class user experiences.",
+    "experience": {
+      "exp1": {
+        "role": "Senior UI/UX Engineer",
+        "description": "Led development of highly animated React applications, designing state-of-the-art interactive dashboards and custom UI frameworks."
+      },
+      "exp2": {
+        "role": "Frontend Developer",
+        "description": "Created premium, glassmorphic customer landing pages with responsive animations and state management stores."
+      },
+      "exp3": {
+        "role": "UI Designer & Web Developer",
+        "description": "Designed and built clean, modular websites for client startups. Focused on SEO, accessibility, and high performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "socials": "التواصل",
+    "services": "الخدمات",
+    "contact": "الآراء",
+    "about": "نبذة عني",
+    "portfolio": "الأعمال",
+    "testimonials": "التوصيات"
+  },
+  "hero": {
+    "subtitle": "مرحباً، أنا",
+    "default_description": "شخص شغوف باستكشاف الأفكار، وابتكار الحلول، وبناء المستقبل.",
+    "get_to_know_me": "تعرف علي"
+  },
+  "socials": {
+    "title": "تواصل معي",
+    "subtitle": "تابعني على منصات التواصل الاجتماعي"
+  },
+  "services": {
+    "title": "خدماتي",
+    "subtitle": "ما يمكنني تقديمه لك",
+    "personal_services": {
+      "title": "خدمات شخصية",
+      "desc": "تجارب سرية واحترافية ومصممة خصيصاً لتلبية احتياجاتك الفردية."
+    },
+    "casual_encounters": {
+      "title": "لقاءات ودية",
+      "desc": "استمتع بلقاءات مريحة وتلقائية مع أشخاص يشاركونك نفس الاهتمامات."
+    },
+    "short_term_relationships": {
+      "title": "علاقات قصيرة المدى",
+      "desc": "بناء روابط ذات معنى والاستمتاع برفقة ممتازة على المدى القريب."
+    },
+    "dating": {
+      "title": "تعارف وزواج",
+      "desc": "العثور على روابط حقيقية واستكشاف فرص العلاقات المستدامة."
+    }
+  },
+  "feedback": {
+    "title": "آراء الزوار",
+    "subtitle": "آراؤكم واقتراحاتكم تهمنا دائماً!",
+    "name_label": "الاسم الكامل",
+    "email_label": "البريد الإلكتروني (اختياري)",
+    "rating_label": "التقييم",
+    "feedback_label": "ملاحظاتك",
+    "name_placeholder": "أدخل اسمك",
+    "email_placeholder": "أدخل بريدك الإلكتروني",
+    "feedback_placeholder": "اكتب ملاحظاتك هنا...",
+    "submit_btn": "إرسال التقييم",
+    "submit_btn_loading": "جاري الإرسال...",
+    "name_required": "يجب أن يتكون الاسم من حرفين على الأقل",
+    "feedback_required": "يجب أن تتكون الرسالة من 5 أحرف على الأقل",
+    "email_invalid": "يرجى أدخال بريد إلكتروني صحيح",
+    "rating_required": "يرجى اختيار التقييم بالنجوم",
+    "success_msg": "شكراً لك! تم حفظ ملاحظاتك بنجاح.",
+    "error_msg": "حدث خطأ أثناء حفظ الملاحظات."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. جميع الحقوق محفوظة.",
+    "made_with": "تم التصميم بـ ❤️ بواسطة {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "الصفحة غير موجودة",
+    "desc": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "back_home": "العودة للرئيسية"
+  },
+  "login": {
+    "title": "دخول المشرف",
+    "subtitle": "أدخل بيانات الاعتماد للوصول للوحة التحكم",
+    "email_label": "البريد الإلكتروني",
+    "password_label": "كلمة المرور",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "تسجيل الدخول",
+    "authorize_btn_loading": "جاري التحقق...",
+    "email_required": "يرجى أدخال بريد إلكتروني صحيح",
+    "password_required": "كلمة المرور مطلوبة",
+    "login_success": "تم تسجيل الدخول بنجاح!",
+    "login_error": "بيانات الدخول غير صحيحة.",
+    "back_to_landing": "العودة للموقع"
+  },
+  "admin": {
+    "console_title": "لوحة التحكم",
+    "offline_mode": "وضع التوفير",
+    "reset_btn": "إعادة ضبط المصنع",
+    "reset_confirm": "هل أنت تأكد من إعادة ضبط كافة المحتويات؟",
+    "reset_success": "تمت الإعادة إلى الوضع الافتراضي بنجاح.",
+    "logout_btn": "تسجيل الخروج",
+    "logout_success": "تم تسجيل الخروج بنجاح.",
+    "save_btn": "حفظ التغييرات",
+    "update_success": "تم حفظ الإعدادات بنجاح!",
+    "tabs": {
+      "hero": "الملف الرئيسي",
+      "about": "نبذة والمهارات",
+      "socials": "روابط التواصل",
+      "services": "الخدمات",
+      "portfolio": "معرض الأعمال",
+      "testimonials": "التوصيات",
+      "feedbacks": "صندوق الآراء",
+      "theme": "إعدادات المظهر",
+      "seo": "إعدادات SEO"
+    }
+  },
+  "about": {
+    "title": "نبذة عني",
+    "subtitle": "السيرة الذاتية والخبرات",
+    "bio_header": "تصميم تجارب ممتازة، وكتابة برمجيات نظيفة.",
+    "work_history": "الخبرات العملية",
+    "technical_proficiency": "المهارات التقنية",
+    "bio": "أنا مهندس واجهات ألمعي ذو خبرة تزيد عن 6 سنوات متخصص في بناء تطبيقات ويب تفاعلية وجذابة. أركز على التفاصيل الدقيقة، والرسوم المتحركة المذهلة، والبنية البرمجية النظيفة.",
+    "experience": {
+      "exp1": {
+        "role": "كبير مهندسي UI/UX",
+        "description": "قيادة تطوير تطبيقات React تفاعلية وتصميم لوحات تحكم متقدمة."
+      },
+      "exp2": {
+        "role": "مطور واجهات ألمعي",
+        "description": "بناء صفحات هبوط فاخرة بتصميم زجاجي ورسوم متحركة متجاوبة."
+      },
+      "exp3": {
+        "role": "مصمم UI ومطور ويب",
+        "description": "تصميم وبناء مواقع ويب حديثة وموحدة للشركات الناشئة مع التركيز على الأداء والـ SEO."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

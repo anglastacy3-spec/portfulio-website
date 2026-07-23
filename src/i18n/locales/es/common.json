@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "socials": "Redes",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "about": "Sobre mí",
+    "portfolio": "Portafolio",
+    "testimonials": "Testimonios"
+  },
+  "hero": {
+    "subtitle": "Hola, soy",
+    "default_description": "Una persona apasionada que explora ideas, crea soluciones y construye el futuro.",
+    "get_to_know_me": "Conóceme"
+  },
+  "socials": {
+    "title": "Conéctate conmigo",
+    "subtitle": "Sígueme en mis redes sociales"
+  },
+  "services": {
+    "title": "Mis Servicios",
+    "subtitle": "Lo que puedo hacer por ti",
+    "personal_services": {
+      "title": "Servicios Personales",
+      "desc": "Experiencias discretas, profesionales y personalizadas para satisfacer sus necesidades."
+    },
+    "casual_encounters": {
+      "title": "Encuentros Casuales",
+      "desc": "Disfruta de encuentros relajados y espontáneos con personas de ideas afines."
+    },
+    "short_term_relationships": {
+      "title": "Relaciones a Corto Plazo",
+      "desc": "Construye conexiones significativas y disfruta de la compañía a corto plazo."
+    },
+    "dating": {
+      "title": "Citas",
+      "desc": "Encuentra conexiones genuinas y explora el potencial de relaciones a largo plazo."
+    }
+  },
+  "feedback": {
+    "title": "Comentarios",
+    "subtitle": "¡Tus opiniones y sugerencias importan!",
+    "name_label": "Su Nombre",
+    "email_label": "Su Correo (Opcional)",
+    "rating_label": "Calificación",
+    "feedback_label": "Sus Comentarios",
+    "name_placeholder": "Su Nombre",
+    "email_placeholder": "Su Correo (Opcional)",
+    "feedback_placeholder": "Sus Comentarios",
+    "submit_btn": "Enviar Comentarios",
+    "submit_btn_loading": "Enviando...",
+    "name_required": "El nombre debe tener al menos 2 caracteres",
+    "feedback_required": "El mensaje debe tener al menos 5 caracteres",
+    "email_invalid": "Por favor, introduce un correo electrónico válido",
+    "rating_required": "Por favor, seleccione una calificación",
+    "success_msg": "¡Gracias! Sus comentarios han sido guardados sin conexión.",
+    "error_msg": "Ocurrió un error al guardar sus comentarios."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. Todos los derechos reservados.",
+    "made_with": "Hecho con ❤️ por {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "Página No Encontrada",
+    "desc": "La página que buscas no existe o ha sido movida.",
+    "back_home": "Volver al Inicio"
+  },
+  "login": {
+    "title": "Acceso de Administrador",
+    "subtitle": "Introduzca las credenciales sin conexión para acceder a los ajustes",
+    "email_label": "Dirección de Correo",
+    "password_label": "Contraseña",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "Autorizar Sesión",
+    "authorize_btn_loading": "Autorizando...",
+    "email_required": "Por favor, introduzca una dirección de correo válida",
+    "password_required": "La contraseña es requerida",
+    "login_success": "¡Inicio de sesión exitoso!",
+    "login_error": "Correo o contraseña no válidos.",
+    "back_to_landing": "Volver al Sitio"
+  },
+  "admin": {
+    "console_title": "Consola de Administración",
+    "offline_mode": "Modo sin conexión",
+    "reset_btn": "Restablecer valores predeterminados",
+    "reset_confirm": "¿Restablecer todos los contenidos y el tema a los valores predeterminados?",
+    "reset_success": "Restaurado a la configuración predeterminada con éxito.",
+    "logout_btn": "Cerrar sesión",
+    "logout_success": "Sesión cerrada correctamente.",
+    "save_btn": "Guardar",
+    "update_success": "¡Ajustes actualizados correctamente!",
+    "tabs": {
+      "hero": "Perfil Principal",
+      "about": "Sobre mí y Habilidades",
+      "socials": "Perfiles Sociales",
+      "services": "Mis Servicios",
+      "portfolio": "Portafolio",
+      "testimonials": "Testimonios",
+      "feedbacks": "Ver Comentarios",
+      "theme": "Ajustes de Tema",
+      "seo": "Configuración SEO"
+    }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Biografía y Experiencia",
+    "bio_header": "Diseñando Experiencias, Escribiendo Código.",
+    "work_history": "Historial Laboral",
+    "technical_proficiency": "Competencia Técnica",
+    "bio": "Soy un Ingeniero Frontend Senior con más de 6 años de experiencia especializado en la creación de aplicaciones web hermosas y altamente interactivas.",
+    "experience": {
+      "exp1": {
+        "role": "Ingeniero UI/UX Senior",
+        "description": "Lideré el desarrollo de aplicaciones React altamente animadas y el diseño de paneles interactivos de última generación."
+      },
+      "exp2": {
+        "role": "Desarrollador Frontend",
+        "description": "Creé páginas de destino premium con animaciones responsivas y almacenamiento de estados."
+      },
+      "exp3": {
+        "role": "Diseñador UI y Desarrollador Web",
+        "description": "Diseñé y construí sitios web modulares para startups enfocados en SEO y alto rendimiento."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio Destacado",
+    "subtitle": "Mis Trabajos y Proyectos",
+    "all_filter": "Todo",
+    "project1": {
+      "title": "Panel de control Nova SaaS",
+      "description": "Un panel de control analítico moderno y de alto rendimiento con gráficos dinámicos."
+    },
+    "project2": {
+      "title": "Terminal Crypto Aether",
+      "description": "Plataforma de seguimiento de criptomonedas en tiempo real con animaciones de lujo oscuras."
+    }
+  },
+  "testimonials": {
+    "title": "Opiniones de Clientes",
+    "subtitle": "Testimonios",
+    "verified_client": "Cliente Verificado",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "¡Angla es un mago absoluto! La página de destino es increíblemente premium y receptiva."
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Trabajar con Angla fue un absoluto placer. El diseño y la atención al detalle son excepcionales."
+    }
+  }
+}

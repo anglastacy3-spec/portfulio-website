@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "socials": "SNS",
+    "services": "サービス",
+    "contact": "フィードバック",
+    "about": "私について",
+    "portfolio": "実績",
+    "testimonials": "評価"
+  },
+  "hero": {
+    "subtitle": "こんにちは、私は",
+    "default_description": "アイデアを探求し、ソリューションを創造し、未来を構築することに情熱を注ぐ個人です。",
+    "get_to_know_me": "詳細を見る"
+  },
+  "socials": {
+    "title": "ソーシャルメディア",
+    "subtitle": "公式アカウントをフォロー"
+  },
+  "services": {
+    "title": "提供サービス",
+    "subtitle": "提供可能なソリューション",
+    "personal_services": {
+      "title": "パーソナルサービス",
+      "desc": "個人のニーズに合わせたきめ細やかでプロフェッショナルな体験を提供します。"
+    },
+    "casual_encounters": {
+      "title": "カジュアルミート",
+      "desc": "同じ趣味や価値観を持つ人々とのリラックスした交流をお楽しみください。"
+    },
+    "short_term_relationships": {
+      "title": "短期パートナーシップ",
+      "desc": "短期間で有意義なつながりや充実したパートナーシップを築きます。"
+    },
+    "dating": {
+      "title": "デーティング",
+      "desc": "真剣な出会いを求め、長期的な関係の可能性を探求します。"
+    }
+  },
+  "feedback": {
+    "title": "フィードバック",
+    "subtitle": "ご意見やご提案をお聞かせください！",
+    "name_label": "お名前",
+    "email_label": "メールアドレス（任意）",
+    "rating_label": "評価（星数）",
+    "feedback_label": "ご意見・メッセージ",
+    "name_placeholder": "お名前を入力",
+    "email_placeholder": "メールアドレスを入力",
+    "feedback_placeholder": "メッセージを入力",
+    "submit_btn": "送信する",
+    "submit_btn_loading": "送信中...",
+    "name_required": "お名前は2文字以上で入力してください",
+    "feedback_required": "メッセージは5文字以上で入力してください",
+    "email_invalid": "有効なメールアドレスを入力してください",
+    "rating_required": "評価の星を選択してください",
+    "success_msg": "ありがとうございます！フィードバックが正常に保存されました。",
+    "error_msg": "保存中にエラーが発生しました。"
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. 全著作権所有。",
+    "made_with": "{{name}} が ❤️ を込めて制作"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "ページが見つかりません",
+    "desc": "お探しのページは存在しないか移動した可能性があります。",
+    "back_home": "ホームに戻る"
+  },
+  "login": {
+    "title": "管理者ログイン",
+    "subtitle": "認証情報を入力してください",
+    "email_label": "メールアドレス",
+    "password_label": "パスワード",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "ログイン",
+    "authorize_btn_loading": "認証中...",
+    "email_required": "有効なメールアドレスを入力してください",
+    "password_required": "パスワードは必須です",
+    "login_success": "ログインに成功しました！",
+    "login_error": "メールアドレスまたはパスワードが正しくありません。",
+    "back_to_landing": "トップページに戻る"
+  },
+  "admin": {
+    "console_title": "管理コンソール",
+    "offline_mode": "オフラインモード",
+    "reset_btn": "すべての初期化",
+    "reset_confirm": "すべてのコンテンツとテーマを初期状態に戻しますか？",
+    "reset_success": "初期状態にリセットされました。",
+    "logout_btn": "ログアウト",
+    "logout_success": "ログアウトしました。",
+    "save_btn": "変更を保存",
+    "update_success": "設定が保存されました！",
+    "tabs": {
+      "hero": "ヒーロー設定",
+      "about": "経歴とスキル",
+      "socials": "SNSリンク",
+      "services": "サービス",
+      "portfolio": "実績ポートフォリオ",
+      "testimonials": "お客様の声",
+      "feedbacks": "意見一覧",
+      "theme": "テーマ設定",
+      "seo": "SEO設定"
+    }
+  },
+  "about": {
+    "title": "私について",
+    "subtitle": "経歴と専門知識",
+    "bio_header": "素晴らしい体験をデザインし、コードを書く。",
+    "work_history": "職務経歴",
+    "technical_proficiency": "技術スキル",
+    "bio": "6年以上の経験を持つシニアフロントエンドエンジニアです。美しくインタラクティブなWebアプリケーションの構築に特化しています。細部へのこだわり、没入感のあるアニメーション、クリーンなアーキテクチャに重点を置いています。",
+    "experience": {
+      "exp1": {
+        "role": "シニア UI/UX エンジニア",
+        "description": "高度なアニメーション付きReactアプリケーションの開発をリードし、最先端のインタラクティブダッシュボードを設計。"
+      },
+      "exp2": {
+        "role": "フロントエンドデベロッパー",
+        "description": "レスポンシブなアニメーションと状態管理を備えた、プレミアムなグラスモーフィズム対応ランディングページを構築。"
+      },
+      "exp3": {
+        "role": "UI Designer & Web Developer",
+        "description": "Designed and built clean, modular websites for client startups. Focused on SEO, accessibility, and high performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Portfolio",
+    "subtitle": "My Work & Projects",
+    "all_filter": "All",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "A modern, high-performance analytic dashboard featuring dynamic charts, glassmorphic layout, and live data telemetry streams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Real-time cryptocurrency tracking platform featuring smooth dark luxury animations, customized theme selectors, and state management."
+    }
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Testimonials",
+    "verified_client": "Verified Client",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla is an absolute wizard! The landing page is incredibly premium, responsive, and was built ahead of schedule. Highly recommended!"
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Working with Angla was an absolute pleasure. The design aesthetics and attention to detail are on another level."
+    }
+  }
+}

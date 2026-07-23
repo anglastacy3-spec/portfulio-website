@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "socials": "Social Media",
+    "services": "Leistungen",
+    "contact": "Feedback",
+    "about": "Über mich",
+    "portfolio": "Projekte",
+    "testimonials": "Bewertungen"
+  },
+  "hero": {
+    "subtitle": "Hallo, ich bin",
+    "default_description": "Eine leidenschaftliche Persönlichkeit, die Ideen erforscht, Lösungen schafft und die Zukunft baut.",
+    "get_to_know_me": "Mehr erfahren"
+  },
+  "socials": {
+    "title": "Vernetzen Sie sich",
+    "subtitle": "Folgen Sie mir auf meinen Social-Media-Kanälen"
+  },
+  "services": {
+    "title": "Meine Leistungen",
+    "subtitle": "Was ich für Sie tun kann",
+    "personal_services": {
+      "title": "Persönliche Services",
+      "desc": "Diskrete, professionelle und maßgeschneiderte Erlebnisse für Ihre individuellen Bedürfnisse."
+    },
+    "casual_encounters": {
+      "title": "Zwanglose Treffen",
+      "desc": "Genießen Sie entspannte und spontane Treffen mit gleichgesinnten Menschen."
+    },
+    "short_term_relationships": {
+      "title": "Kurzzeitige Verbindungen",
+      "desc": "Knüpfen Sie wertvolle Kontakte und genießen Sie angenehme Gesellschaft."
+    },
+    "dating": {
+      "title": "Dating & Partnersuche",
+      "desc": "Finden Sie echte Verbindungen und entdecken Sie Möglichkeiten für langfristige Beziehungen."
+    }
+  },
+  "feedback": {
+    "title": "Feedback & Bewertung",
+    "subtitle": "Ihre Meinung und Vorschläge sind mir wichtig!",
+    "name_label": "Ihr Name",
+    "email_label": "Ihre E-Mail (Optional)",
+    "rating_label": "Bewertung",
+    "feedback_label": "Ihre Nachricht",
+    "name_placeholder": "Ihr Name",
+    "email_placeholder": "Ihre E-Mail",
+    "feedback_placeholder": "Ihre Nachricht...",
+    "submit_btn": "Feedback absenden",
+    "submit_btn_loading": "Wird gesendet...",
+    "name_required": "Name muss mindestens 2 Zeichen lang sein",
+    "feedback_required": "Nachricht muss mindestens 5 Zeichen lang sein",
+    "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "rating_required": "Bitte wählen Sie eine Sternebewertung",
+    "success_msg": "Vielen Dank! Ihr Feedback wurde erfolgreich gespeichert.",
+    "error_msg": "Beim Speichern Ihres Feedbacks ist ein Fehler aufgetreten."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. Alle Rechte vorbehalten.",
+    "made_with": "Mit ❤️ erstellt von {{name}}"
+  },
+  "notfound": {
+    "title": "404",
+    "subtitle": "Seite nicht gefunden",
+    "desc": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "back_home": "Zurück zur Startseite"
+  },
+  "login": {
+    "title": "Admin-Zugang",
+    "subtitle": "Geben Sie Ihre Anmeldedaten ein",
+    "email_label": "E-Mail-Adresse",
+    "password_label": "Passwort",
+    "email_placeholder": "admin@example.com",
+    "password_placeholder": "••••••••",
+    "authorize_btn": "Anmelden",
+    "authorize_btn_loading": "Anmeldung...",
+    "email_required": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "password_required": "Passwort ist erforderlich",
+    "login_success": "Erfolgreich angemeldet!",
+    "login_error": "Ungültige E-Mail oder Passwort.",
+    "back_to_landing": "Zurück zur Website"
+  },
+  "admin": {
+    "console_title": "Admin-Konsole",
+    "offline_mode": "Offline-Modus",
+    "reset_btn": "Alles zurücksetzen",
+    "reset_confirm": "Möchten Sie alle Inhalte auf die Standardwerte zurücksetzen?",
+    "reset_success": "Erfolgreich auf Standardwerte zurückgesetzt.",
+    "logout_btn": "Abmelden",
+    "logout_success": "Erfolgreich abgemeldet.",
+    "save_btn": "Speichern",
+    "update_success": "Einstellungen erfolgreich aktualisiert!",
+    "tabs": {
+      "hero": "Hero-Profil",
+      "about": "Über mich & Skills",
+      "socials": "Social-Links",
+      "services": "Leistungen",
+      "portfolio": "Portfolio-Projekte",
+      "testimonials": "Referenzen",
+      "feedbacks": "Feedback-Ansicht",
+      "theme": "Design-Farben",
+      "seo": "SEO-Konfig"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Biografie & Expertise",
+    "bio_header": "Erlebnisse gestalten, Code schreiben.",
+    "work_history": "Beruflicher Werdegang",
+    "technical_proficiency": "Technische Fähigkeiten",
+    "bio": "Ich bin ein Senior Frontend Engineer mit über 6 Jahren Erfahrung, spezialisiert auf die Entwicklung schöner, hochgradig interaktiver Webanwendungen. Mein Fokus liegt auf detailgenauem Design, immersiven Animationen und sauberen Architekturen.",
+    "experience": {
+      "exp1": {
+        "role": "Senior UI/UX Engineer",
+        "description": "Leitung der Entwicklung animierter React-Anwendungen und Design moderner interaktiver Dashboards."
+      },
+      "exp2": {
+        "role": "Frontend-Entwickler",
+        "description": "Erstellung hochwertiger Glassmorphism-Landingpages mit responsiven Animationen."
+      },
+      "exp3": {
+        "role": "UI-Designer & Webentwickler",
+        "description": "Konzeption und Erstellung modularer Websites für Start-ups mit Fokus auf SEO und Performance."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Meine Arbeiten",
+    "all_filter": "Alle",
+    "project1": {
+      "title": "Nova SaaS Dashboard",
+      "description": "Ein modernes Analyse-Dashboard mit dynamischen Diagrammen und Echtzeit-Datenstreams."
+    },
+    "project2": {
+      "title": "Aether Crypto Terminal",
+      "description": "Echtzeit-Krypto-Tracking-Plattform mit eleganten Dark-Mode-Animationen und Theme-Auswahl."
+    }
+  },
+  "testimonials": {
+    "title": "Kundenstimmen",
+    "subtitle": "Referenzen",
+    "verified_client": "Verifizierter Kunde",
+    "test1": {
+      "name": "Sarah Connor",
+      "comment": "Angla ist ein echter Zauberer! Die Landingpage ist extrem hochwertig, mobil optimiert und vor dem Zeitplan fertig geworden."
+    },
+    "test2": {
+      "name": "David Miller",
+      "comment": "Die Zusammenarbeit mit Angla war ein absolutes Vergnügen. Die Ästhetik und Liebe zum Detail sind herausragend."
+    }
+  }
+}
