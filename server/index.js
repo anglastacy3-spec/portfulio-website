@@ -16,7 +16,6 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middleware
 app.use(cors());
@@ -427,17 +426,45 @@ async function seedDefaultData() {
   }
 }
 
-// Routes
+// Global Mongoose Configuration: Disable query buffering so operations never stall for 10s
+mongoose.set('bufferCommands', false);
 
-// Health check
+// Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected' });
+  const readyState = mongoose.connection.readyState;
+  if (readyState === 1) {
+    return res.json({
+      status: 'ok',
+      database: {
+        connected: true,
+        readyState: 1,
+        host: mongoose.connection.host || 'unknown',
+        database: mongoose.connection.name || 'usababes',
+      },
+    });
+  }
+  res.status(503).json({
+    status: 'error',
+    database: {
+      connected: false,
+      readyState,
+      reason: 'Database connection is not active.',
+    },
+  });
 });
 
 // Database Connection Middleware for Vercel Serverless & standalone Express
 app.use(async (req, res, next) => {
   if (req.path.startsWith('/api') && req.path !== '/api/health') {
-    await connectDB();
+    try {
+      await connectDB();
+    } catch (err) {
+      return res.status(503).json({
+        success: false,
+        error: 'Database connection failed',
+        details: err.message || 'Unable to connect to MongoDB Atlas database server.',
+      });
+    }
   }
   next();
 });
@@ -558,28 +585,41 @@ if (!process.env.VERCEL) {
 }
 
 // Start Server & Connect Database
-let isConnected = false;
+let isConnecting = null;
+
 export async function connectDB() {
-  if (isConnected || mongoose.connection.readyState === 1) {
-    isConnected = true;
+  if (mongoose.connection.readyState === 1) {
     return;
   }
-  if (!MONGODB_URI) {
-    console.warn('⚠️ MONGODB_URI environment variable is missing.');
+
+  if (isConnecting) {
+    await isConnecting;
     return;
   }
+
+  const uri = process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error('MONGODB_URI environment variable is missing.');
+  }
+
   try {
-    await mongoose.connect(MONGODB_URI);
-    isConnected = true;
+    isConnecting = mongoose.connect(uri, {
+      bufferCommands: false,
+      serverSelectionTimeoutMS: 5000,
+    });
+    await isConnecting;
     console.log('✅ Connected to MongoDB Atlas successfully.');
     await seedDefaultData();
   } catch (err) {
     console.error('❌ MongoDB Connection Failure:', err);
+    throw err;
+  } finally {
+    isConnecting = null;
   }
 }
 
-if (MONGODB_URI) {
-  connectDB();
+if (process.env.MONGODB_URI) {
+  connectDB().catch((err) => console.error('Initial DB connect attempt error:', err.message));
 }
 
 if (!process.env.VERCEL) {
