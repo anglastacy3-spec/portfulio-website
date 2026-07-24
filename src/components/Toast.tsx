@@ -52,7 +52,7 @@ export const ToastContainer: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none">
+    <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex flex-col gap-2.5 sm:gap-3 max-w-sm sm:w-full pointer-events-none mx-auto sm:mx-0">
       <AnimatePresence>
         {toasts.map((toast) => (
           <motion.div
@@ -60,16 +60,17 @@ export const ToastContainer: React.FC = () => {
             initial={enableAnim ? { opacity: 0, y: 20, scale: 0.95 } : { opacity: 1 }}
             animate={enableAnim ? { opacity: 1, y: 0, scale: 1 } : { opacity: 1 }}
             exit={enableAnim ? { opacity: 0, scale: 0.9, y: -10 } : { opacity: 0 }}
-            className={`glass pointer-events-auto p-4 flex items-center gap-3 border shadow-glass ${glows[toast.type]}`}
+            className={`glass pointer-events-auto p-3.5 sm:p-4 flex items-start sm:items-center gap-3 border shadow-glass ${glows[toast.type]}`}
             style={{ borderRadius: settings.cardRadius }}
           >
-            {icons[toast.type]}
-            <p className="text-xs md:text-sm font-medium text-white/95 leading-relaxed flex-grow">
+            <div className="mt-0.5 sm:mt-0">{icons[toast.type]}</div>
+            <p className="text-xs sm:text-sm font-medium text-white/95 leading-snug break-words flex-grow">
               {toast.message}
             </p>
             <button
               onClick={() => removeToast(toast.id)}
-              className="text-white/40 hover:text-white/80 transition-colors p-1"
+              className="text-white/40 hover:text-white/80 transition-colors p-1 shrink-0 mt-0.5 sm:mt-0"
+              aria-label="Close notification"
             >
               <X className="w-4 h-4" />
             </button>
