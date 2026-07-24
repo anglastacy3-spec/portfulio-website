@@ -434,6 +434,14 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected' });
 });
 
+// Database Connection Middleware for Vercel Serverless & standalone Express
+app.use(async (req, res, next) => {
+  if (req.path.startsWith('/api') && req.path !== '/api/health') {
+    await connectDB();
+  }
+  next();
+});
+
 // App Data Routes
 app.get('/api/data', async (req, res) => {
   try {
@@ -534,14 +542,6 @@ app.post('/api/reset', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-});
-
-// Ensure DB connection before processing API requests
-app.use(async (req, res, next) => {
-  if (req.path.startsWith('/api') && req.path !== '/api/health') {
-    await connectDB();
-  }
-  next();
 });
 
 // Serve static assets & wildcard fallback in standalone production mode (non-Vercel)
