@@ -75,7 +75,7 @@ export const useContentStore = create<ContentState>((set, get) => {
   }
   
   // Migration: replace Twitter with Snapchat if present in existing localStorage state
-  const hasTwitter = initialData.socials.some(s => (s.name as string) === 'Twitter/X' || (s.name as string) === 'Twitter');
+  const hasTwitter = initialData.socials?.some(s => (s.name as string) === 'Twitter/X' || (s.name as string) === 'Twitter');
   if (hasTwitter) {
     initialData.socials = initialData.socials.map(s => 
       ((s.name as string) === 'Twitter/X' || (s.name as string) === 'Twitter')
