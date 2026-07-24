@@ -123,9 +123,14 @@ export const useContentStore = create<ContentState>((set, get) => {
       if (dbData) {
         set({ data: { ...dbData } });
         storageService.saveAppData(dbData);
+        if (dbData.seo?.favicon) updateFavicon(dbData.seo.favicon);
+      } else {
+        console.warn('⚠️ fetchFromDb: AppData API query returned null (likely HTTP error or HTML gate block). Retaining local state.');
       }
       if (dbFeedbacks) {
         set({ feedbacks: [...dbFeedbacks] });
+      } else {
+        console.warn('⚠️ fetchFromDb: Feedbacks API query returned null. Retaining local feedbacks.');
       }
     },
 
