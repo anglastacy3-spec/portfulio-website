@@ -16,6 +16,21 @@ export const Home: React.FC = () => {
   useEffect(() => {
     fetchFromDb();
     fetchThemeFromDb();
+
+    const handleRevalidate = () => {
+      if (document.visibilityState === 'visible') {
+        fetchFromDb();
+        fetchThemeFromDb();
+      }
+    };
+
+    window.addEventListener('focus', handleRevalidate);
+    document.addEventListener('visibilitychange', handleRevalidate);
+
+    return () => {
+      window.removeEventListener('focus', handleRevalidate);
+      document.removeEventListener('visibilitychange', handleRevalidate);
+    };
   }, [fetchFromDb, fetchThemeFromDb]);
 
   return (

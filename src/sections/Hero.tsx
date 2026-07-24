@@ -87,6 +87,7 @@ export const Hero: React.FC = () => {
           >
             <div className="w-full h-full rounded-full overflow-hidden bg-darkBg border border-white/10 flex items-center justify-center">
               <img
+                key={data.hero.avatar}
                 src={getOptimizedCloudinaryUrl(data.hero.avatar, 400)}
                 alt={getLocalizedContent(data.hero.name)}
                 fetchPriority="high"
@@ -99,6 +100,7 @@ export const Hero: React.FC = () => {
           <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full p-1 bg-gradient-primary shadow-[0_0_20px_var(--glow-color)] flex items-center justify-center shrink-0 mb-4">
             <div className="w-full h-full rounded-full overflow-hidden bg-darkBg border border-white/10 flex items-center justify-center">
               <img
+                key={data.hero.avatar}
                 src={getOptimizedCloudinaryUrl(data.hero.avatar, 400)}
                 alt={getLocalizedContent(data.hero.name)}
                 fetchPriority="high"

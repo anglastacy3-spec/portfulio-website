@@ -121,11 +121,11 @@ export const useContentStore = create<ContentState>((set, get) => {
       const dbData = await apiService.getAppData();
       const dbFeedbacks = await apiService.getFeedbacks();
       if (dbData) {
-        set({ data: dbData });
+        set({ data: { ...dbData } });
         storageService.saveAppData(dbData);
       }
       if (dbFeedbacks) {
-        set({ feedbacks: dbFeedbacks });
+        set({ feedbacks: [...dbFeedbacks] });
       }
     },
 
