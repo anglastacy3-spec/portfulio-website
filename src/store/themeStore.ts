@@ -76,18 +76,24 @@ export const useThemeStore = create<ThemeState>((set, get) => {
         applyThemeToDom(dbTheme);
       }
     },
-    updateTheme: (newSettings) => {
+    updateTheme: async (newSettings) => {
       const updated = { ...get().settings, ...newSettings };
       set({ settings: updated });
-      storageService.saveThemeSettings(updated);
-      apiService.updateThemeSettings(updated);
       applyThemeToDom(updated);
+      const success = await apiService.updateThemeSettings(updated);
+      if (success) {
+        storageService.saveThemeSettings(updated);
+      } else {
+        console.warn('MongoDB theme sync failed. LocalStorage persistence skipped.');
+      }
     },
-    resetTheme: () => {
-      storageService.saveThemeSettings(DEFAULT_THEME);
+    resetTheme: async () => {
       set({ settings: DEFAULT_THEME });
-      apiService.updateThemeSettings(DEFAULT_THEME);
       applyThemeToDom(DEFAULT_THEME);
+      const success = await apiService.updateThemeSettings(DEFAULT_THEME);
+      if (success) {
+        storageService.saveThemeSettings(DEFAULT_THEME);
+      }
     },
     applyCurrentTheme: () => {
       applyThemeToDom(get().settings);

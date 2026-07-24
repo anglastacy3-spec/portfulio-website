@@ -408,29 +408,19 @@ const DEFAULT_DATA = {
   },
 };
 
-// In-memory response cache for fast <1ms reads
-let cachedAppData = null;
-let cachedTheme = null;
-
 // Seed initial data if empty
 async function seedDefaultData() {
   try {
     const existingData = await AppData.findOne({ key: 'main_content' }).lean();
     if (!existingData) {
-      const created = await AppData.create(DEFAULT_DATA);
-      cachedAppData = created.toObject();
+      await AppData.create(DEFAULT_DATA);
       console.log('⚡ Initial AppData seeded into MongoDB.');
-    } else {
-      cachedAppData = existingData;
     }
 
     const existingTheme = await Theme.findOne({ key: 'main_theme' }).lean();
     if (!existingTheme) {
-      const created = await Theme.create(DEFAULT_THEME);
-      cachedTheme = created.toObject();
+      await Theme.create(DEFAULT_THEME);
       console.log('⚡ Initial ThemeSettings seeded into MongoDB.');
-    } else {
-      cachedTheme = existingTheme;
     }
   } catch (err) {
     console.error('Error seeding default data:', err);
@@ -448,15 +438,11 @@ app.get('/api/health', (req, res) => {
 app.get('/api/data', async (req, res) => {
   try {
     res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
-    if (cachedAppData) {
-      return res.json(cachedAppData);
-    }
     let data = await AppData.findOne({ key: 'main_content' }).lean();
     if (!data) {
       const created = await AppData.create(DEFAULT_DATA);
       data = created.toObject();
     }
-    cachedAppData = data;
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -470,7 +456,6 @@ app.put('/api/data', async (req, res) => {
       { $set: req.body },
       { new: true, upsert: true, runValidators: false }
     ).lean();
-    cachedAppData = updated;
     res.json(updated);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -511,15 +496,11 @@ app.delete('/api/feedbacks/:id', async (req, res) => {
 app.get('/api/theme', async (req, res) => {
   try {
     res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
-    if (cachedTheme) {
-      return res.json(cachedTheme);
-    }
     let theme = await Theme.findOne({ key: 'main_theme' }).lean();
     if (!theme) {
       const created = await Theme.create(DEFAULT_THEME);
       theme = created.toObject();
     }
-    cachedTheme = theme;
     res.json(theme);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -533,7 +514,6 @@ app.put('/api/theme', async (req, res) => {
       { $set: req.body },
       { new: true, upsert: true }
     ).lean();
-    cachedTheme = updated;
     res.json(updated);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -543,8 +523,6 @@ app.put('/api/theme', async (req, res) => {
 // Reset Route
 app.post('/api/reset', async (req, res) => {
   try {
-    cachedAppData = null;
-    cachedTheme = null;
     await AppData.deleteOne({ key: 'main_content' });
     await Theme.deleteOne({ key: 'main_theme' });
     await Feedback.deleteMany({});
@@ -552,10 +530,7 @@ app.post('/api/reset', async (req, res) => {
     const newAppData = await AppData.create(DEFAULT_DATA);
     const newTheme = await Theme.create(DEFAULT_THEME);
     
-    cachedAppData = newAppData.toObject();
-    cachedTheme = newTheme.toObject();
-    
-    res.json({ success: true, data: cachedAppData, theme: cachedTheme });
+    res.json({ success: true, data: newAppData.toObject(), theme: newTheme.toObject() });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

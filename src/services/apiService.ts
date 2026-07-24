@@ -6,7 +6,7 @@ export const apiService = {
   // App Data
   async getAppData(): Promise<AppData | null> {
     try {
-      const res = await fetch(`${API_BASE}/data`);
+      const res = await fetch(`${API_BASE}/data?t=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) return null;
       const data = await res.json();
       return data;
@@ -33,7 +33,7 @@ export const apiService = {
   // Feedbacks
   async getFeedbacks(): Promise<FeedbackSubmission[] | null> {
     try {
-      const res = await fetch(`${API_BASE}/feedbacks`);
+      const res = await fetch(`${API_BASE}/feedbacks?t=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) return null;
       return await res.json();
     } catch (err) {
@@ -79,7 +79,7 @@ export const apiService = {
   // Theme
   async getThemeSettings(): Promise<ThemeSettings | null> {
     try {
-      const res = await fetch(`${API_BASE}/theme`);
+      const res = await fetch(`${API_BASE}/theme?t=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) return null;
       return await res.json();
     } catch (err) {

@@ -88,10 +88,14 @@ export const useContentStore = create<ContentState>((set, get) => {
   const initialFeedbacks = storageService.getFeedbacks();
 
   // Async sync with MongoDB & LocalStorage
-  const sync = (updatedData: AppData) => {
+  const sync = async (updatedData: AppData) => {
     set({ data: updatedData });
-    storageService.saveAppData(updatedData);
-    apiService.updateAppData(updatedData);
+    const success = await apiService.updateAppData(updatedData);
+    if (success) {
+      storageService.saveAppData(updatedData);
+    } else {
+      console.warn('MongoDB API sync failed. LocalStorage persistence skipped.');
+    }
   };
 
   // Auto-fetch from MongoDB on init
